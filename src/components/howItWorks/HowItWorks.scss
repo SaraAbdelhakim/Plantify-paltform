@@ -1,0 +1,62 @@
+/* Section Styles */
+.how-it-works {
+    padding: 4rem 2rem;
+    background-color: #f8f9ff; /* Light background */
+  }
+  
+  /* Title Styling */
+  .how-it-works-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  
+  /* Container Layout */
+  .how-it-works-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+  }
+  
+  /* Alternate Layout for Odd Items */
+  .how-it-works-container.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Image Styling */
+  .how-it-works-image img {
+    max-width: 400px; /* Adjust as needed */
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  /* Text Styling */
+  .how-it-works-text {
+    flex: 1;
+  }
+  
+  .how-it-works-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .how-it-works-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .how-it-works-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .how-it-works-container.reverse {
+      flex-direction: column; /* Disable reverse on small screens */
+    }
+  }
+  

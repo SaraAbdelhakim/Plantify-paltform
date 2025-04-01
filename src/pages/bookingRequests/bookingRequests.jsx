@@ -1,10 +1,10 @@
 import React from 'react'
-import "./bookingRequests.scss"
+import "./BookingRequests.scss"
 
-const bookingRequests = () => {
+const BookingRequests = () => {
   return (
     <div className='bookingRequests'>bookingRequests</div>
   )
 }
 
-export default bookingRequests
+export default BookingRequests
