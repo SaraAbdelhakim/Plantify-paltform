@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Plane as Plant, Calendar, MapPin, Plus, MessageSquare, Edit3, Trash2, ChevronDown, Leaf } from 'lucide-react';
 import "./MyRequests.scss"
+import { useNavigate } from "react-router-dom";
 import {mockRequests} from '../../data'
 
 const MyRequests = () => {
   const [filter, setFilter] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
+  const navigate = useNavigate();
+
 
   const formatDateRange = (start, end) => {
     const startDate = new Date(start).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
@@ -36,7 +39,7 @@ const MyRequests = () => {
               Manage your current and past requests, and track sitter responses.
             </p>
           </div>
-          <button className="create-button">
+          <button className="create-button" onClick={() => navigate("/addPlant")}>
             <Plus size={20} />
             Create New Request
           </button>
