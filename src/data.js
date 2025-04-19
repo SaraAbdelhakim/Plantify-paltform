@@ -72,3 +72,38 @@ export const mockRequests = [
       }
     }
   ];
+
+
+export const DUMMY_REQUESTS = [
+    {
+      id: 101,
+      plantId: 1, // link to plant
+      startDate: "2024-04-01",
+      endDate: "2024-04-15",
+      location: "San Francisco, CA",
+      requestTime: "2025-03-10T08:30:00",
+      status: "pending",
+      sitter: null,
+      owner: {
+        name: "Emma Wilson",
+        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop&q=60",
+        area: "Pacific Heights"
+      }
+    },
+    {
+      id: 102,
+      plantId: 2, // link to plant
+      startDate: "2024-04-10",
+      endDate: "2024-04-30",
+      location: "San Francisco, CA",
+      requestTime: "2024-03-09T15:45:00",
+      status: "pending",
+      sitter: null,
+      owner: {
+        name: "David Kim",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=60",
+        area: "Hayes Valley"
+      }
+    }
+  ];
+  

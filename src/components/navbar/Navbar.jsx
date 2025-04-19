@@ -21,8 +21,8 @@ const Navbar = () => {
     const currentUser = {
         id:1,
         username: "Sara Hammad",
-        isKeeper: false,
-        isOwner: true
+        isKeeper: true,
+        isOwner: false
     }
   return (
     <div className={active ? 'navbar active' : 'navbar'}>
