@@ -34,6 +34,7 @@ const Navbar = () => {
             </div>
             <div className='links'>
                 <Link className="link" to="/plants">All Plants</Link>
+                <Link className="link" to="/plantSitterListing">Find a Sitter</Link>
                 {!currentUser?.isKeeper && <span>Become a PlantKeeper</span>}
                 {!currentUser && <span>Login</span>}
                 {!currentUser && <button>Join</button>}

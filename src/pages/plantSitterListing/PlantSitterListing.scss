@@ -1,0 +1,288 @@
+.plant-sitter-listing {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.search-sidebar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #4a5568;
+      font-weight: 500;
+    }
+
+    input,
+    select {
+      padding: 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+
+      &:focus {
+        outline: none;
+        border-color: #48bb78;
+        box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.2);
+      }
+    }
+
+    input {
+      width: 89%;
+    }
+  }
+}
+
+.search-button {
+  background: #48bb78;
+  color: white;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #38a169;
+  }
+}
+
+.sitter-listings {
+  flex: 1;
+}
+
+.listings-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #718096;
+  }
+}
+
+.sitters-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sitter-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  .sitter-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .sitter-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #48bb78;
+  }
+
+  .sitter-info {
+    flex: 1;
+
+    h3 {
+      font-size: 1.25rem;
+      color: #2d3748;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-badge {
+      display: inline-block;
+      background: #f0fff4;
+      color: #48bb78;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #2d3748;
+      font-weight: 500;
+
+      @media (max-width: 640px) {
+        margin-top: 1rem;
+      }
+
+      .star-icon {
+        color: #f6ad55;
+        fill: #f6ad55;
+      }
+
+      .reviews-count {
+        color: #718096;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .sitter-body {
+    padding: 1.5rem;
+
+    .sitter-description {
+      color: #4a5568;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #4a5568;
+      margin-bottom: 0.75rem;
+    }
+
+    .specialties {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+
+      .specialty-tag {
+        background: #edf2f7;
+        color: #4a5568;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .hourly-rate {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #f7fafc;
+      border-radius: 0.5rem;
+      text-align: center;
+
+      .rate {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2d3748;
+      }
+
+      .rate-label {
+        color: #718096;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .sitter-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: #f7fafc;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+
+    .action-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: all 0.2s;
+
+      &.message {
+        background: #fff;
+        color: #4a5568;
+        border: 1px solid #e2e8f0;
+
+        &:hover {
+          background: #edf2f7;
+        }
+      }
+
+      &.details {
+        background: #edf2f7;
+        color: #4a5568;
+
+        &:hover {
+          background: #e2e8f0;
+        }
+      }
+
+      &.book-now {
+        background: #48bb78;
+        color: white;
+
+        &:hover {
+          background: #38a169;
+        }
+      }
+    }
+  }
+}

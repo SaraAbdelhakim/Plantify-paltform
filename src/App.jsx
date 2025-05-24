@@ -13,6 +13,8 @@ import MyBookings from "./pages/myBookings/MyBookings"
 import BookingRequests from "./pages/bookingRequests/BookingRequests"
 import MyProfile from "./pages/myProfile/MyProfile"
 import Plants from "./pages/plants/Plants"
+import PlantSitterListing from './pages/plantSitterListing/PlantSitterListing';
+
 
 import {
   createBrowserRouter,
@@ -80,6 +82,10 @@ function App() {
         {
           path: "/plants",
           element: <Plants/>
+        },
+                {
+          path: "/plantSitterListing",
+          element: <PlantSitterListing/>
         },
       ]
     },

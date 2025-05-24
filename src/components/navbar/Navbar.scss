@@ -6,6 +6,7 @@
     transition: 0.5s all ease;
     position: sticky;
     top: 0;
+    z-index: 9999;
 
 &.active{
     background-color: #f8f9ff;
