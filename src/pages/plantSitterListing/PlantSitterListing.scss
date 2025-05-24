@@ -159,13 +159,15 @@
       font-size: 0.875rem;
       font-weight: 500;
     }
+  }
 
     .rating {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      color: #2d3748;
+      color: #595d64;
       font-weight: 500;
+
 
       @media (max-width: 640px) {
         margin-top: 1rem;
@@ -181,8 +183,6 @@
         font-size: 0.875rem;
       }
     }
-  }
-
   .sitter-body {
     padding: 1.5rem;
 
